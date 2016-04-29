@@ -1,0 +1,63 @@
+apt-get install
+apt-get remove
+ll
+ls
+
+.so   shared object  
+.ko   kernel object 内核模块，可以在linux起来后动态加载或者卸载。
+
+cat ws_adrd_customer_105561.tar.bz2a* | tar -jx
+
+source.list 是位于/etc/apt/下的一个普通文件，保存了软件更新的源服务器的地址。
+
+unzip -d  解压zip到指定的路径
+unzip -d /usr/local/  mtk-toolchain.zip
+
+
+source ./selfbuild uboot
+source ./selfbuild kernal
+source ./selfbuild driver
+source ./selfbuild arm2
+
+source ./selfenv 设置环境变量
+source ./selfbuild uboot
+source ./selfbuild kernel
+source ./selfbuild driver
+source ./selfbuild arm2
+source ./selfbuild android
+gedit selfbuild
+
+（PS:如果android4.2.2里有out文件夹，在全部编译之前请删除之）
+
+root@xfangV480:~/Carplay/ws_adrd_customer_105561/AC8317/MAIN_BR/android/android4.2.2# 
+
+在刚登录Linux时，首先启动 /etc/profile 文件，然后再启动用户目录下的 ~/.bash_profile、 ~/.bash_login或 ~/.profile文件中的其中一个
+
+
+android frameworks:安卓开发框架，相当于安卓的API，四大组件是Android framework的一部分。。想了解framework 的内容，那需要关注android系统层内容。了解android系统架构
+
+git前
+mmm autochips_v4/libipodhid/hidtest
+adb push out/target/product/ac8317/system/bin/hidtest /bin && adb shell "bin/hidtest"
+
+
+git后在android_carplay目录
+mmm autochips/external/libipodhid
+如果出现libdev.h没找到的话，就局部编译一下（mm -B），
+source ./selfbuild cpoverlay
+cd autochips/external/libipodhid/
+mm -B
+然后再mmm autochips/external/libipodhid
+最后
+adb push out/target/product/ac8317/system/bin/hidtest /data
+adb shell data/hidtest
+或者adb push out/target/product/ac8317/system/bin/hidtest /data && shell data/hidtest
+adb push可以把这个hidtest放到任何地方，我们放到了/data，也可以放到/bin，随便，然后只要用adb shell 执行就可以了。
+
+
+
+
+
+
+
+
